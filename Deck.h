@@ -1,14 +1,15 @@
 #pragma once
 #include <string>
 #include "Card.h"
-#include <stack>
+#include <vector>
+#include <algorithm>
+#include <cstdlib>
 
 using namespace std;
-//hello Zach
-//test 2
+
 
 class Deck {
-	 stack<Card> theDeck;
+	 vector<Card> theDeck;
 public:
 
 	 bool isEmpty() {
@@ -19,13 +20,13 @@ public:
 		return theDeck.size();
 	}
 
-	 void shuffle() {
-
+	 void shuffle() { 
+		 random_shuffle(theDeck.begin(), theDeck.end());
 	}
 
 	 Card draw() {
-		 Card tempCard(theDeck.top().getId(), theDeck.top().getCardType(), theDeck.top().getCardColor());
-		 theDeck.pop();
+		 Card tempCard(theDeck.back().getId(), theDeck.back().getCardType(), theDeck.back().getCardColor());
+		 theDeck.pop_back();
 		 return tempCard;
 
 	}
@@ -121,7 +122,7 @@ public:
 	}
 
 	 void addCardToDeck(Card cardToBeAdded) {
-		theDeck.push(cardToBeAdded);
+		theDeck.push_back(cardToBeAdded);
 	}
 
 };
