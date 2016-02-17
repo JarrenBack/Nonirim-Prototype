@@ -6,17 +6,14 @@
 #include <cstdlib>
 
 using namespace std;
-<<<<<<< HEAD
 
 
-class Deck {
-	 vector<Card> theDeck;
-=======
+
 
 class Deck {
 private:
-	 stack<Card> deck_h;
->>>>>>> 0eb06512edd14c584366493fdedbf38f724f390c
+	 vector<Card> deck_h;
+
 public:
 
 	 bool isEmpty() {
@@ -28,17 +25,13 @@ public:
 	}
 
 	 void shuffle() { 
-		 random_shuffle(theDeck.begin(), theDeck.end());
+		 random_shuffle(deck_h.begin(), deck_h.end());
 	}
 
 	 Card draw() {
-<<<<<<< HEAD
-		 Card tempCard(theDeck.back().getId(), theDeck.back().getCardType(), theDeck.back().getCardColor());
-		 theDeck.pop_back();
-=======
-		 Card tempCard(deck_h.top().getId(), deck_h.top().getCardType(), deck_h.top().getCardColor());
-		 deck_h.pop();
->>>>>>> 0eb06512edd14c584366493fdedbf38f724f390c
+
+		 Card tempCard(deck_h.back().getId(), deck_h.back().getCardType(), deck_h.back().getCardColor());
+		 deck_h.pop_back();
 		 return tempCard;
 
 	}
@@ -57,7 +50,7 @@ public:
 <<<<<<< HEAD
 		theDeck.push_back(cardToBeAdded);
 =======
-		deck_h.push(cardToBeAdded);
+		deck_h.push_back(cardToBeAdded);
 >>>>>>> 0eb06512edd14c584366493fdedbf38f724f390c
 	}
 
