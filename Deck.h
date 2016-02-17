@@ -34,7 +34,8 @@ public:
 		//So we will create of the needed cards and push them onto the stack
 
 
-		 string sun = "sun" , moon = "moon", key = "key", blue = "blue", brown = "brown", green = "green", red = "red" , nightmare = "nightmare", door = "door";
+		 string sun = "sun" , moon = "moon", key = "key", blue = "blue", brown = "brown",
+			 green = "green", red = "red" , nightmare = "nightmare", door = "door";
 
 		 int i = 1;	
 		 for (int j = 0; i < 9; j++) {
