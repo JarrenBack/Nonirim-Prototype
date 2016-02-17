@@ -101,6 +101,15 @@ public:
 	//playCardFromHand
 	//DiscardFromHand
 	//
+
+	void showHand() {
+		theHand.seehand_h();
+	}
+
+	void shuffleDeck() {
+		deckInter.shuffle();
+	}
+
 private:
 	Deck deckInter;
 	Hand theHand;
