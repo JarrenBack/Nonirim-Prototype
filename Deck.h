@@ -37,12 +37,6 @@ public:
 	}
 
 	 Deck() {
-		//here we could initialize the deck (push all of the cards on to the deck that it starts off with)
-		//So we will create of the needed cards and push them onto the stack
-
-
-
-
 
 	}
 
