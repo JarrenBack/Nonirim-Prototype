@@ -6,18 +6,25 @@
 #include <cstdlib>
 
 using namespace std;
+<<<<<<< HEAD
 
 
 class Deck {
 	 vector<Card> theDeck;
+=======
+
+class Deck {
+private:
+	 stack<Card> deck_h;
+>>>>>>> 0eb06512edd14c584366493fdedbf38f724f390c
 public:
 
 	 bool isEmpty() {
-		return theDeck.empty();
+		return deck_h.empty();
 	}
 
 	 int getNumCardsInDeck() {
-		return theDeck.size();
+		return deck_h.size();
 	}
 
 	 void shuffle() { 
@@ -25,8 +32,13 @@ public:
 	}
 
 	 Card draw() {
+<<<<<<< HEAD
 		 Card tempCard(theDeck.back().getId(), theDeck.back().getCardType(), theDeck.back().getCardColor());
 		 theDeck.pop_back();
+=======
+		 Card tempCard(deck_h.top().getId(), deck_h.top().getCardType(), deck_h.top().getCardColor());
+		 deck_h.pop();
+>>>>>>> 0eb06512edd14c584366493fdedbf38f724f390c
 		 return tempCard;
 
 	}
@@ -36,93 +48,17 @@ public:
 		//So we will create of the needed cards and push them onto the stack
 
 
-		 string sun = "sun" , moon = "moon", key = "key", blue = "blue", brown = "brown",
-			 green = "green", red = "red" , nightmare = "nightmare", door = "door";
 
-		 int i = 1;	
-		 for (int j = 0; i < 9; j++) {
-			 Card c(i, sun, red);
-			 addCardToDeck(c);
-			 i++;
-		 }
-
-		 for (int j = 0; i < 8; j++) {
-			 Card c(i, sun, blue);
-			 addCardToDeck(c);
-			 i++;
-		 }
-
-		 for (int j = 0; i < 7; j++) {
-			 Card c(i, sun, green);
-			 addCardToDeck(c);
-			 i++;
-		 }
-
-		 for (int j = 0; i < 6; j++) {
-			 Card c(i, sun, brown);
-			 addCardToDeck(c);
-			 i++;
-		 }
-		 
-		 for (int j = 0; i < 4; j++) {
-			 Card c(i, moon, red);
-			 i++;
-			 Card c1(i, moon, blue);
-			 i++;
-			 Card c2(i, moon, green);
-			 i++;
-			 Card c3(i, moon, brown);
-			 i++;
-			 addCardToDeck(c);
-			 addCardToDeck(c1);
-			 addCardToDeck(c2);
-			 addCardToDeck(c3);
-			 
-		 }
-
-		 for (int j = 0; i < 3; j++) {
-			 Card c(i, key, red);
-			 i++;
-			 Card c1(i, key, blue);
-			 i++;
-			 Card c2(i, key, green);
-			 i++;
-			 Card c3(i, key, brown);
-			 i++;
-			 addCardToDeck(c);
-			 addCardToDeck(c1);
-			 addCardToDeck(c2);
-			 addCardToDeck(c3);
-
-		 }
-
-		 for (int j = 0; j < 10; j++) {
-			 Card c(i, nightmare, nightmare);
-			 addCardToDeck(c);
-			 i++;
-		 }
-
-		 for (int j = 0; i < 2; j++) {
-			 Card c(i, door, red);
-			 i++;
-			 Card c1(i, door, blue);
-			 i++;
-			 Card c2(i, door, green);
-			 i++;
-			 Card c3(i, door, brown);
-			 i++;
-			 addCardToDeck(c);
-			 addCardToDeck(c1);
-			 addCardToDeck(c2);
-			 addCardToDeck(c3);
-
-		 }
 
 
 	}
 
 	 void addCardToDeck(Card cardToBeAdded) {
+<<<<<<< HEAD
 		theDeck.push_back(cardToBeAdded);
+=======
+		deck_h.push(cardToBeAdded);
+>>>>>>> 0eb06512edd14c584366493fdedbf38f724f390c
 	}
 
 };

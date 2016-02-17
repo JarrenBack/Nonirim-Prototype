@@ -6,45 +6,46 @@
 using namespace std;
 class Hand {
 public:
+	Hand(){}
 	Hand(Card c1, Card c2, Card c3, Card c4, Card c5)
 	{
-			hand[0] = c1;
-			hand[1] = c2;
-			hand[2] = c3;
-			hand[3] = c4;
-			hand[4] = c5;
+			hand_h[0] = c1;
+			hand_h[1] = c2;
+			hand_h[2] = c3;
+			hand_h[3] = c4;
+			hand_h[4] = c5;
 	}
 	void addCard(Card newCard)
 	{
 		int i = 0;
-		while (hand[i].getId() != 0)
+		while (hand_h[i].getId() != 0)
 		{
 			i++;
 		}
 		//newCard.setIsDrawn = true;
-		hand[i] = newCard;
+		hand_h[i] = newCard;
 	}
 	void removeCard(Card toRemoveCard)
 	{
 		int i = 0;
-		while (hand[i] != toRemoveCard)
+		while (hand_h[i] != toRemoveCard)
 		{
 			i++;
 		}
-		hand[i].remove();
+		hand_h[i].remove();
 	}
 
-	void seeHand()
+	void seehand_h()
 	{
 		for (int i = 0; i < 5; i++)
 		{
 			cout << "Card #" << i << endl;
-			cout << hand[i].getCardType() << endl;
-			cout << hand[i].getCardColor() << endl << endl;
+			cout << hand_h[i].getCardType() << endl;
+			cout << hand_h[i].getCardColor() << endl << endl;
 		}
 	}
 private:
-	Card hand[5];
+	Card hand_h[5];
 
 
 };
