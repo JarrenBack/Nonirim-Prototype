@@ -48,7 +48,7 @@ public:
 
 	 void addCardToDeck(Card cardToBeAdded) {
 <<<<<<< HEAD
-		theDeck.push_back(cardToBeAdded);
+		
 =======
 		deck_h.push_back(cardToBeAdded);
 >>>>>>> 0eb06512edd14c584366493fdedbf38f724f390c
