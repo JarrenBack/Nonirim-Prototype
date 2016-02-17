@@ -19,11 +19,6 @@ public:
 	}
 	void removeCard(Card toRemoveCard)
 	{
-		//list<Card>::iterator itr = theLab.begin();
-		//while (*itr != toRemoveCard)
-		//{
-		//	++itr;
-		//}
 		theLab.remove(toRemoveCard);
 	}
 

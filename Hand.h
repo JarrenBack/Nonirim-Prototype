@@ -35,7 +35,7 @@ public:
 		hand_h[i].remove();
 	}
 
-	void seehand_h()
+	void seeHand_h()
 	{
 		for (int i = 0; i < 5; i++)
 		{
