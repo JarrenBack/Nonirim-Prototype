@@ -47,7 +47,7 @@ public:
 	}
 
 	 void addCardToDeck(Card cardToBeAdded) {
-		
+
 		deck_h.push_back(cardToBeAdded);
 	}
 
