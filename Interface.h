@@ -62,7 +62,7 @@ public:
 			Card c3(i, key, brown);
 			i++;
 			deckInter.addCardToDeck(c);
-			//deckInter2.addCardToDeck(c);
+			deckInter2.addCardToDeck(c);
 			deckInter.addCardToDeck(c1);
 			deckInter.addCardToDeck(c2);
 			deckInter.addCardToDeck(c3);
@@ -90,6 +90,7 @@ public:
 			deckInter.addCardToDeck(c3);
 
 		}
+		deckInter.shuffle();
 	}
 	//drawCardIntoHand
 	void drawFromDeckIntoHand() {
@@ -103,5 +104,6 @@ public:
 	//
 private:
 	Deck deckInter;
+	Deck deckInter2;
 	Hand theHand;
 };
